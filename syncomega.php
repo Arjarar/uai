@@ -1,40 +1,185 @@
-<?php
-/**
- * @package		local
- * @author		Ignacio Opazo, Jorge Villalón
- * @license		http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+<html lang="en">
 
-require_once(dirname(__FILE__) . '/../../config.php');
-require_once(dirname(__FILE__) . '/locallib.php');
-require_once($CFG->libdir . '/adminlib.php');
+<head><title>Tabla Flexible</title></head>
+	<meta charset="UTF-8">
+	<title>DataTable</title>
+	<!--cargamos remotamente JUERY-->
+<!--script src="http://code.jquery.com/jquery-2.1.1.min.js"></script-->
+<script src="jquery-2.1.1.js"></script>
+<script type="text/javascript" src="jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="table.js"></script>
+<body>
+<h1>Sincronizacion Omega</h1>
+<style type="text/css">
+  body {
+        color: black;
+        background-color: lightgrey 
+       }
+h1     {
+         color: Black;
+         font-family: Helvetica, Geneva, Arial,
+         SunSans-Regular, sans-serif 
+       }
+thead     {
+         color: white;
+         background-color: grey 
+       }
+tfoot  {
+         color: white;
+         background-color: Grey 
+       }
+  </style>
 
-require_login();
+<table id="example" class="display" cellspacing="1" width="100%" border ="1" background-color="blue">
+        <thead>
+            <tr>
+                <th>Periodo Academico</th>
+                <th>Categoria Webcursos</th>
+                <th>Facultad</th>
+                <th>Sede</th>
+                <th>Fecha creacion</th>
+                <th>Fecha inicio P.A</th>
+                <th>Fecha termino P.A</th>
+                <th>Sincronizacion activa</th>
+            </tr>
+        </thead>
+ 
+<!--         <tfoot> -->
+<!--             <tr> -->
+<!--                 <th>Nombre</th> -->
+<!--                 <th>Universidad</th> -->
+<!--                 <th>Curso</th> -->
+<!--                 <th>Edad</th> -->
+<!--                 <th>Fecha Nacimiento</th> -->
+<!--                 <th>Nota</th> -->
+<!--             </tr> -->
+<!--         </tfoot> -->
+ 
+        <tbody>
+            <tr>
+                <td>Primer semestre</td>
+                <td>I trimestre 2015</td>
+                <td>Escuela de Negocios</td>
+                <td>Santiago-Penalolen</td>
+                <td>mar 8 2015</td>
+                <td>mar 9 2015</td>
+                <th>may 9 2015</th>
+                <th>si</th>
+            </tr>
+             <tr>
+                <td>Primer semestre</td>
+                <td>I trimestre 2015</td>
+                <td>Escuela de Negocios</td>
+                <td>Vina</td>
+                <td>mar 8 2015</td>
+                <td>mar 9 2015</td>
+                <th>may 9 2015</th>
+                <th>si</th>
+            </tr>
+            <tr>
+                <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Santiago-Penalolen</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+              <tr>
+                <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Vina</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+            <tr>
+               <td>Segundo semestre</td>
+                <td>III trimestre 2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Santiago-Penalolen</td>
+                <td>Ago 8 2015</td>
+                <td>Ago 9 2015</td>
+                <th>Oct 8 2015</th>
+                <th>no</th>
+            </tr>
+            <tr>
+                <td>Segundo semestre</td>
+                <td>IV trimestre2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Santiago-Penalolen</td>
+                <td>Oct 8 2015</td>
+                <td>Oct 9 2015</td>
+                <th>Dic 9 2015</th>
+                <th>no</th>
+            </tr>
+            <tr>
+             <td>Primer semestre</td>
+                <td>Primer semestre</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Santiago-Penalolen</td>
+                <td>Mar 8 2015</td>
+                <td>Mar9 2015</td>
+                <th>Jul 9 2015</th>
+                <th>no</th>
+            </tr>
+                  <tr>
+                <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Santiago-Penalolen</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+            
+            <tr>
+              <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Vina</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+            <tr>
+                <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Ingenieria y ciencias</td>
+                <td>Santiago-Penalolen</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+            <tr>
+               <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Escuela Periodismo</td>
+                <td>Santiago-Penalolen</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+            <tr>
+              <td>Primer semestre</td>
+                <td>II trimestre 2015</td>
+                <td>Escuela de Negocios</td>
+                <td>Santiago-Penalolen</td>
+                <td>jun 8 2015</td>
+                <td>jun 9 2015</td>
+                <th>Ago 9 2015</th>
+                <th>no</th>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
 
-require_capability('moodle/site:config', context_system::instance());
-admin_externalpage_setup('syncomega');
-
-//Se obtienen los parámetros de la URL
-$accion = optional_param('accion', '', PARAM_ALPHA);
-$omega = optional_param('omega', 0, PARAM_INT);
-$categoria = optional_param('categoria', 0, PARAM_INT);
-$valor = optional_param('valor', -1, PARAM_INT);
-
-$syncData = new syncData();
-
-if($accion!='' && $omega!=0 && $categoria!=0){
-	if($accion == 'activo' && $valor != -1){
-		$syncData->activarDatos($valor, $omega, $categoria);
-	}elseif($accion == 'eliminar'){
-		$syncData->eliminarDatos($omega, $categoria);
-	}
-}
-
-//Se define el formato de la página y su contenido.
-$PAGE->set_pagelayout('standard');
-$renderer = $PAGE->get_renderer('local_uai');
-
-$data = $syncData->seleccionarDatos();
-
-echo $renderer->index_page($data);
-
+</html>
